@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+    <title>Practice </title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            /* border: 1px solid green; */
+            height: auto;
+            width: 100%;
+            margin: auto;
+            background-color: rgb(48, 83, 105);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .menu_icon {
+            display: none;
+        }
+
+        .logo_div {
+            /* border: 1px solid red; */
+            display: flex;
+            width: 10%;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .logo_div img {
+            width: 30%;
+            padding: 10px;
+            /* border: 1px solid blueviolet; */
+        }
+
+        .input_div {
+            /* border: 1px solid rgb(0, 119, 255); */
+            padding: 10px
+        }
+
+        .link_div {
+            width: 40%;
+            display: flex;
+            justify-content: space-between;
+            /* border: 1px solid green; */
+            font-weight: bold;
+        }
+
+        .link_div a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .top_div {
+            /* border: 1px solid black; */
+            height: 500px;
+            display: flex;
+            /* background-color: cornsilk; */
+
+            justify-content: space-between;
+
+
+
+        }
+
+        .invest_div {
+            /* border: 1px solid greenyellow; */
+            width: 30%;
+            height: 185px;
+            margin-top: 100px;
+            margin: auto;
+            text-align: center;
+            transition: all 0.9s ease-in-out;
+
+
+
+
+        }
+
+
+
+
+
+        .invest_div button{
+            width: 150px;
+            height: 30px;
+            background-color: cadetblue;
+        }
+        button:hover{
+            cursor: pointer;
+            background-color: rgb(127, 182, 106);
+            transform: scale(1.2);
+
+        }
+
+
+
+        .img_div {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin-left: 100px;
+            gap: 30px;
+            /* border: 1px solid black; */
+
+
+
+
+
+
+
+        }
+        .img_div :hover{
+   transform: scale(1.2);
+        }
+
+        .img_div img {
+            width: 100%;
+            /* opacity: 25%; */
+
+
+        }
+
+        .top_div2 {
+            /* border: 1px solid black; */
+            width: 50%;
+            text-align: right;
+            display: grid;
+            text-align: center;
+            margin-top: 50px;
+
+
+
+        }
+
+
+
+
+
+        .box_img {
+
+            width: 150px;
+            /* border: 1px solid black; */
+            border-radius: 15px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+
+        .box_img h4 {
+            margin-top: 15px;
+        }
+
+
+        .box_img img {
+            width: 30px;
+            margin-top: 30px;
+        }
+
+        .keeplearning_div {
+            /* border: 1px solid black; */
+            width: 100%;
+
+
+        }
+        .keep_div div:hover{
+   transform: scale(1.2);
+        }
+
+
+
+
+        h2 {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .keep_div {
+            /* border: 1px solid black; */
+            width: 80%;
+            /* background-color: beige; */
+            margin: auto;
+            display: flex;
+            height: 300px;
+            gap: 30px;
+
+        }
+
+        .keep_div div {
+            width: 20%;
+            margin: auto;
+
+            text-align: center;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+        }
+
+        .keep_div img {
+            width: 50%;
+        }
+
+        .tax_saving img {
+            width: 40%;
+        }
+
+        .select_img img {
+            width: 60%;
+
+        }
+
+        .third_container {
+            width: 78%;
+            margin: auto;
+            /* border: 1px solid; */
+            text-align: center;
+            background-color: rgb(227, 249, 242);
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+
+        .third_container p {
+            margin-top: -15px;
+            font-weight: bold;
+        }
+
+        .mutual_div {
+            /* border: 1px solid salmon; */
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 30px;
+
+        }
+
+        .mutual_div div img {
+            transition: all 0.5s ease-in-out;
+        }
+
+        .mutual_div div img:hover {
+            cursor: pointer;
+            /* transform: scale(1.9); */
+        }
+
+        .third_container button {
+            margin-top: 30px;
+            background-color: rgb(107, 117, 112);
+            padding: 10px 20px;
+            border: none;
+            /* margin: 10px 0px 50px 0px; */
+            border-radius: 10px;
+            color: white;
+        }
+
+        .fourth_container {
+            /* border: 1px solid; */
+            background-color: rgb(20, 208, 145);
+            display: flex;
+            justify-content: space-around;
+            padding: 40px 0px 0px 0px;
+            border-radius: 15px;
+            width: 78%;
+            margin: 40px auto;
+        }
+
+        .last_div {
+            /* border:  1px solid salmon; */
+            display: grid;
+            place-items: center;
+        }
+
+        .last_div h1,
+        .last_div p {
+            color: white;
+            /* font-size: x-large; */
+        }
+
+        .last_div button {
+            background-color: white;
+            color: rgb(20, 208, 145);
+            border: none;
+            font-size: xx-large;
+            font-weight: 500;
+            padding: 20px 60px 20px 60px;
+            border-radius: 5px;
+        }
+
+        .h1_p_div {
+            /* border: 1px solid; */
+        }
+
+        .last_div h1 {
+            font-size: xx-large;
+        }
+
+        h4 {
+            /* margin-top: 25%; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo_div">
+            <img src="./download.jpg"
+                alt="">
+        </div>
+        <div class="link_div">
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Contact</a>
+            <a href="">Project</a>
+        </div>
+        <div class="input_div">
+            <input type="search"
+                placeholder="Search">
+            <button>Search</button>
+        </div>
+        <div class="menu_icon">
+            <span>&#9776;</span>
+        </div>
+    </nav>
+
+
+    <div class="top_div">
+        <div class="invest_div">
+            <h2>Invest In IPOs</h2>
+            <h5>Trusted By Millions Of Indians.Start Investing Today</h5><BR></br>
+            <button> GET STARTED</button>
+        </div>
+        <div class="top_div2">
+            <div class="img_div">
+                <div class="box_img"> <img src="./future and options.jpg"
+                        alt=""><br>
+
+                    <h4>Mutul Funds</h4>
+
+                </div>
+                <div class="box_img"> <img src="./sip.png"
+                        alt=""><br>
+                    <h4>Stocks</h4>
+
+                </div>
+                <div class="box_img"> <img src="./divnew two.png"
+                        alt=""><br>
+                    <h4>Future & Options</h4>
+
+                </div>
+                <div class="box_img"> <img src="./grow.jpg"
+                        alt="">
+                    <h4>US Stocks</h4>
+
+                </div>
+                <div class="box_img"> <img src="./ipo.jpg"
+                        alt="">
+                    <h4>IPOs</h4>
+
+                </div>
+                <div class="box_img"> <img src="./fix deposit.webp"
+                        alt="">
+                    <h4>Fixed Deposits</h4>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="keeplearning_div">
+        <h2>Keep learning.Keep growing.</h2>
+
+        <div class="keep_div">
+
+            <div class="select_img"> <img src="./how to select for intraday.jpg"
+                    alt=""><br>
+                <h4>How to select/Pick Stocks for intraday</h4>
+            </div>
+            <div class="tax_saving"> <img src="./tax saving.webp"
+                    alt=""><br>
+                <h4>Begainers Guid to Mutul Funds</h4>
+            </div>
+            <div>
+                <img src="./how to diversify in volatility.jpg"
+                    alt=""><br>
+                <h4>How to Diversify in the time of Market Volatility</h4>
+            </div>
+        </div>
+    </div>
+    <div class="third_container">
+        <h1>Discover Matual Funds</h1><br>
+        <p>Search Matual Funds,AMCs etc.</p>
+        <div class="mutual_div">
+            <div>
+                <img src="./UntitledSIPONE.png"
+                    alt="" />
+                <h3>High Returns</h3>
+            </div>
+            <div>
+                <img src="./siptwo.png"
+                    alt="" />
+                <h3>SIP With 500</h3>
+            </div>
+            <div>
+                <img src="./sipthree.png"
+                    alt="" />
+                <h3>Tax savings</h3>
+            </div>
+            <div>
+                <img src="./sipfour.png"
+                    alt="" />
+                <h3>Large Cap</h3>
+            </div>
+            <div>
+                <img src="./sipfive.png"
+                    alt="" />
+                <h3>Mid cap</h3>
+            </div>
+            <div>
+                <img src="./sipsix.png"
+                    alt="" />
+                <h3>Small Cap</h3>
+            </div>
+        </div>
+        <button>Explore All Matual Funds</button>
+    </div>
+    <div class="fourth_container">
+        <div class="last_div">
+            <div class="h1_p_div">
+                <h1>We Are with You At Every Step</h1><br>
+                <p>
+                    For Any Enqury You Have,Find The Answer Quickly On Our Support.Need
+                    A Littlt Bit More Help?
+                </p><br>
+                <p>We're Happy talkVia Call Or Chat</p><br>
+                <button>Get In Touch</button>
+            </div>
+        </div>
+        <div class="lastimage_div">
+            <img src="./manishlassssstimg.png"
+                alt="" />
+        </div>
+    </div>
+    <div class="footer_container">
+        <footer></footer>
+    </div>
+
+
+</body>
+
+
+</body>
+
+</html>
